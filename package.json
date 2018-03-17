@@ -30,7 +30,9 @@
     "codecov": "^2.1.0",
     "eslint": "^3.16",
     "mocha": "^3.2",
-    "nyc": "^10.3.2"
+    "nyc": "^10.3.2",
+    "sinon": "^4.4.6",
+    "sinon-chai": "^3.0.0"
   },
   "scripts": {
     "test": "nyc mocha",
