@@ -27,6 +27,20 @@ describe('calcValue works as it should', () => {
 
     expect(testCase).to.equal(expectedResult);
   });
+  it('should add !important to the end if told to', () => {
+    var testCase = lgLogic.calcValue('1/3', '0', 99.9, '%', true);
+
+    var expectedResult = 'calc(99.9% * 1/3)!important';
+
+    expect(testCase).to.equal(expectedResult);
+  });
+  it('should not add !important to the end if told to', () => {
+    var testCase = lgLogic.calcValue('1/3', '0', 99.9, '%', false);
+
+    var expectedResult = 'calc(99.9% * 1/3)';
+
+    expect(testCase).to.equal(expectedResult);
+  });
 });
 
 describe('Units are validated based on if they make sense', () => {
